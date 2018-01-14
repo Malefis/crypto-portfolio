@@ -3,9 +3,9 @@ var omgAmount = 1.98;
 var ltcAmount = 0.08709;
 var batAmount = 13.62781009	+ 24.99;
 var kncAmount = 1.36;
-var portfolio = 0;
 $( document ).ready(function() {
     $.post('https://min-api.cryptocompare.com/data/pricemulti?fsyms=NEO,OMG,LTC,BAT,KNC&tsyms=USD,GBP', function(cryptoPrices) {
+
 
       //Calculate portfolio pie chart
       var neoWorth = cryptoPrices.NEO.GBP * neoAmount;
@@ -16,7 +16,7 @@ $( document ).ready(function() {
 
       var portfolioWorth = neoWorth + omgWorth + ltcWorth + batWorth + kncWorth;
       console.log(portfolioWorth.toFixed(2) , 'GBP');
-
+      $('.left-side').html("Your current portfolio worth is: " + portfolioWorth.toFixed(2) , 'GBP' );
 
       var neoPercentage = (neoWorth / portfolioWorth) * 100;
       var neoPercentageRounded = neoPercentage.toFixed(2);
@@ -24,7 +24,7 @@ $( document ).ready(function() {
       var omgPercentage = (omgWorth / portfolioWorth) * 100;
       var omgPercentageRounded = omgPercentage.toFixed(2);
 
-      var ltcPercentage = (neoWorth / portfolioWorth) * 100;
+      var ltcPercentage = (ltcWorth / portfolioWorth) * 100;
       var ltcPercentageRounded = ltcPercentage.toFixed(2);
 
       var batPercentage = (batWorth / portfolioWorth) * 100;
