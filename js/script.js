@@ -16,7 +16,7 @@ $( document ).ready(function() {
 
       var portfolioWorth = neoWorth + omgWorth + ltcWorth + batWorth + kncWorth;
       console.log(portfolioWorth.toFixed(2) , 'GBP');
-      $('.left-side').html("Your current portfolio worth is: " + portfolioWorth.toFixed(2) , 'GBP' );
+      $('.balance').html("<br>£" + portfolioWorth.toFixed(2) , 'GBP' );
 
       var neoPercentage = (neoWorth / portfolioWorth) * 100;
       var neoPercentageRounded = neoPercentage.toFixed(2);

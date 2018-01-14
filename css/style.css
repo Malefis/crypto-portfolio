@@ -1,10 +1,40 @@
 body{
   font-family: 	'Helvetica Neue', 'Helvetica', 'Arial', "sans-serif";
   color: #000000;
+  background-color: orange;
 }
-.pie{
-  
+.cryptoPrices{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-right-side{
+.cryptos{
+  margin: 15px 15px 15px 15px;
+}
+.balance{
+  margin: 0px 0px 0px 0px;
+    font-size: 5vh;
+    display: flex;
+    justify-content: center;
+}
+.neo{
+  border: 2px solid #666;
+  background-color: #74CB02;
+}
+.omg{
+  border: 2px solid #666;
+  background-color: #1A53F0;
+}
+.ltc{
+  border: 2px solid #666;
+  background-color: #E0E0E0;
+}
+.bat{
+  border: 2px solid #666;
+  background-color: #9e1f63;
 
+}
+.knc{
+  border: 2px solid #666;
+  background-color: #5EB2A5;
 }
